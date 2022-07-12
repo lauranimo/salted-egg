@@ -4,12 +4,15 @@ import TaskHeader from "../components/todo/TaskHeader"
 import Tasks from '../components/todo/Tasks';
 import '../components/index.css'
 import AddTask from '../components/todo/AddTask';
-import AllSounds from '../components/bg-sound/AllSounds';
 import Time from '../components/background/Time';
+import cafeAnimation from "../images/cafe-animation.mp4"
+import AllSounds from '../components/bg-sound/AllSounds';
+
 
 function Index() {
   const [todo, setTodo] = useState(false);
   const [sound, setSound] = useState(false);
+
 
   // We need the tasks variable across components- can't declare inside just one
   const [showForm, setShowForm] = useState(false)
@@ -48,25 +51,30 @@ function Index() {
   return (
     <main>
       <Draggable>
-        <div className={`todo-container ${todo ? 'focus' : ''}`}  onClick={() => setTodo(!todo)}>
+        <button className={`todo-container ${todo ? 'focus' : ''}`}  onClick={() => setTodo(!todo)}>
             <TaskHeader onAdd={() => setShowForm(!showForm)}
             showForm={showForm}/>
             {showForm && <AddTask onAdd={addTask}/>}
             <Tasks tasks = {tasks}
               onDelete = {deleteTask}
               onToggle = {toggleimportant}/>
-        </div>
+        </button>
       </Draggable>
+      <div className='centerpiece'>
+        <video autoPlay loop muted id='animation'>
+          <source src={cafeAnimation} type='video/mp4'/>
+        </video>
+      </div>
       <div className="greetings-container">
           <Time/>
         </div>
       <Draggable>
-        <div className={`sounds-container ${sound ? 'focus' : ''}`}  onClick={() => setSound(!sound)}>
+        <button className={`sounds-container ${sound ? 'focus' : ''}`}  onClick={() => setSound(!sound)}>
           <header className='header'>
             <h1>Sounds</h1>
           </header>
           <AllSounds/>
-        </div>
+        </button>
       </Draggable>
 
     </main>

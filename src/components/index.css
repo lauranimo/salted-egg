@@ -14,16 +14,16 @@ body {
 
 /* ----- Shared elements ----- */
 .header {
-  padding: 3% 2% 0% 6%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: flex-end;
-  background-color: #FAF5EB ;
+  padding: 3% 2% 0% 6%;
+  width: 100%;
   border-radius: 16px;
   margin-bottom: 5%;
+  background-color: #FAF5EB ;
   color: #750C00;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .btn {
@@ -54,6 +54,7 @@ body {
   overflow: auto;
   font-weight: 400;
   background-color: #FFD2B7;
+  border: none;
   padding: 1.5% 0.7% 1.5% 0.7%;
   border-radius: 16px;
   box-shadow: 4px 4px 5px 0 rgba(117, 12, 0, 0.5);
@@ -62,6 +63,7 @@ body {
   right: 0;
   left: 0;
   position: absolute;
+  font-family: inherit;
   z-index: -1;
 }
 
@@ -72,13 +74,14 @@ body {
 .add-form {
   margin-bottom: 20px;
   background-color: #FAF5EB;
-  padding: 5% 10% 5% 5% ;
+  padding: 2% 10% 5% 5% ;
   border-radius: 16px;
 }
 
 .form-control h3 {
   padding-top: 5%;
   float: left;
+  font-size: 1.4em;
 }
 
 .form-control input {
@@ -136,6 +139,9 @@ body {
   right: 0;
   left: 0;
   z-index: -1;
+  font-family: inherit;
+  border: none;
+  font-size: 1em;
 }
 
 .sounds-container.focus {
@@ -146,23 +152,23 @@ body {
   background-color: #FAF5EB;
   border-radius: 16px;
   padding: 8% 5% 0% 5%;
+  color: #750C00;
 }
 
 .play-sound {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.1em;
 }
 
 .play-sound h3 {
-  color: #750C00;
   padding-left: 5%;
   font-size: 1.2em;
 }
 
 .my-sound {
-  padding-bottom: 5%;
+  padding-bottom: 4%;
 }
 
 .volume-control {
@@ -243,10 +249,22 @@ input[type=range]::-ms-thumb {
 } */
 
 /* ----- Center BG Components ----- */
+#animation {
+  position: absolute;
+  z-index: -101;
+  width: 33%;
+  margin: auto;
+  top: 12%;
+  right: 0;
+  left: 0;
+
+}
+
+
 .greetings-container {
   position: absolute;
   margin: auto;
-  top: 70%;
+  top: 72%;
   right: 0;
   left: 0;
   font-size: 325%;
