@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from "react"
+import React, { useState } from "react"
 import Draggable from "react-draggable";
 import TaskHeader from "../components/todo/TaskHeader"
 import Tasks from '../components/todo/Tasks';
@@ -9,6 +8,9 @@ import AllSounds from '../components/bg-sound/AllSounds';
 import Time from '../components/background/Time';
 
 function Index() {
+  const [todo, setTodo] = useState(false);
+  const [sound, setSound] = useState(false);
+
   // We need the tasks variable across components- can't declare inside just one
   const [showForm, setShowForm] = useState(false)
   const [tasks, setTasks] = useState([])
@@ -32,10 +34,21 @@ function Index() {
     {...task, important: !task.important} : task))
   }
 
+  // Update Z-index
+  // const changeFocus = (ref) => {
+  //   // document.getElementsByClassName(className)[0].style.zIndex += 100;
+  //   // document.getElementsByClassName(className)[0].style.zIndex -= 100;
+  //   // console.log(document.getElementsByClassName({className})[0].style.zIndex);
+  //   this.ref.current.style.zIndex += 100;
+  //   // ref.current.style.zIndex += 100;
+  //   console.log(ref);
+
+  // }
+
   return (
     <main>
       <Draggable>
-        <div className='todo-container'>
+        <div className={`todo-container ${todo ? 'focus' : ''}`}  onClick={() => setTodo(!todo)}>
             <TaskHeader onAdd={() => setShowForm(!showForm)}
             showForm={showForm}/>
             {showForm && <AddTask onAdd={addTask}/>}
@@ -48,7 +61,7 @@ function Index() {
           <Time/>
         </div>
       <Draggable>
-        <div className='sounds-container'>
+        <div className={`sounds-container ${sound ? 'focus' : ''}`}  onClick={() => setSound(!sound)}>
           <header className='header'>
             <h1>Sounds</h1>
           </header>
