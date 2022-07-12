@@ -3,6 +3,8 @@ import { FaTimesCircle } from 'react-icons/fa'
 
 const MyTask = ({ task, onDelete, onToggle }) => {
   return (
+    // Curly brackets are used to evaluate a JS expression during compilation
+    // Can be a variable, function, object- any code that resolves into a value
     <div className={`task ${task.important ? 'important' : ''}`}
     onDoubleClick={() => onToggle(task.id)}
     role='button'

@@ -5,12 +5,14 @@ import TaskHeader from "../components/todo/TaskHeader"
 import Tasks from '../components/todo/Tasks';
 import '../components/index.css'
 import AddTask from '../components/todo/AddTask';
+import AllSounds from '../components/bg-sound/AllSounds';
 
 function Index() {
+  // We need the tasks variable across components- can't declare inside just one
   const [showForm, setShowForm] = useState(false)
   const [tasks, setTasks] = useState([])
 
-  // Add Task
+  // Add Task- might generate same number lol
   const addTask = (task) => {
     const id = Math.floor(Math.random() *1000) + 1
     const newTask = {id, ...task}
@@ -39,6 +41,14 @@ function Index() {
             <Tasks tasks = {tasks}
               onDelete = {deleteTask}
               onToggle = {toggleimportant}/>
+        </div>
+      </Draggable>
+      <Draggable>
+        <div className='sounds-container'>
+          <header className='header'>
+            <h1>Sounds</h1>
+          </header>
+          <AllSounds/>
         </div>
       </Draggable>
 

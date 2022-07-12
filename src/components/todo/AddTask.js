@@ -6,6 +6,7 @@ const AddTask = ({ onAdd }) => {
     const [time, setTime] = useState('')
     const [important, setimportant] = useState(false)
 
+    // Calls the AddTask function in index.js, passing an obj containing needed info as the task
     const onSubmit = (e) => {
         e.preventDefault()
 
