@@ -231,3 +231,29 @@ input[type=range]::-ms-thumb {
   background: #750C00;
   cursor: pointer;
 } */
+
+/* ----- Center BG Components ----- */
+.greetings-container {
+  position: absolute;
+  margin: auto;
+  top: 70%;
+  right: 0;
+  left: 0;
+  font-size: 325%;
+}
+
+.greetings {
+  text-align: center;
+}
+
+.greetings h6 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 50%;
+  line-height: 50%;
+}
+
+.greetings p {
+  font-size: 50%;
+  line-height: 20%;
+}

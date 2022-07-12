@@ -6,6 +6,7 @@ import Tasks from '../components/todo/Tasks';
 import '../components/index.css'
 import AddTask from '../components/todo/AddTask';
 import AllSounds from '../components/bg-sound/AllSounds';
+import Time from '../components/background/Time';
 
 function Index() {
   // We need the tasks variable across components- can't declare inside just one
@@ -43,6 +44,9 @@ function Index() {
               onToggle = {toggleimportant}/>
         </div>
       </Draggable>
+      <div className="greetings-container">
+          <Time/>
+        </div>
       <Draggable>
         <div className='sounds-container'>
           <header className='header'>
