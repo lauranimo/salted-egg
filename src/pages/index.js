@@ -54,11 +54,12 @@ function Index() {
       <div className='centerpiece'>
         <video autoPlay loop muted id='animation'>
           <source src={cafeAnimation} type='video/mp4'/>
-        </video>
-      </div>
-      <div className="greetings-container">
+        </video>      
+        <div className="greetings-container">
           <Time/>
         </div>
+      </div>
+
       <Widget id = {'sounds-widget'}
         container = {<button className={`sounds-container ${sound ? 'focus' : ''}`}  onClick={() => setSound(!sound)}>
           <header className='header'>
