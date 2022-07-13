@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Draggable from "react-draggable";
+import Widget from "../components/Widget";
 import TaskHeader from "../components/todo/TaskHeader"
 import Tasks from '../components/todo/Tasks';
 import '../components/index.css'
@@ -50,16 +51,27 @@ function Index() {
 
   return (
     <main>
-      <Draggable>
-        <button className={`todo-container ${todo ? 'focus' : ''}`}  onClick={() => setTodo(!todo)}>
+      {/* <Widget className = {'todo-widget'}>
+        <button className={`todo-container ${todo ? 'focus' : ''}`}  onClick={() => setTodo(!todo)} key='contain'>
             <TaskHeader onAdd={() => setShowForm(!showForm)}
             showForm={showForm}/>
             {showForm && <AddTask onAdd={addTask}/>}
             <Tasks tasks = {tasks}
               onDelete = {deleteTask}
               onToggle = {toggleimportant}/>
+            
         </button>
-      </Draggable>
+      </Widget> */}
+        <Widget className = {'todo-widget'}
+          container = {<button className={`todo-container ${todo ? 'focus' : ''}`}  onClick={() => setTodo(!todo)} key='contain'>
+            <TaskHeader onAdd={() => setShowForm(!showForm)}
+            showForm={showForm}/>
+            {showForm && <AddTask onAdd={addTask}/>}
+            <Tasks tasks = {tasks}
+              onDelete = {deleteTask}
+              onToggle = {toggleimportant}/>     
+            </button>}>
+        </Widget>
       <div className='centerpiece'>
         <video autoPlay loop muted id='animation'>
           <source src={cafeAnimation} type='video/mp4'/>
@@ -68,14 +80,22 @@ function Index() {
       <div className="greetings-container">
           <Time/>
         </div>
-      <Draggable>
+      {/* <Draggable>
         <button className={`sounds-container ${sound ? 'focus' : ''}`}  onClick={() => setSound(!sound)}>
           <header className='header'>
             <h1>Sounds</h1>
           </header>
           <AllSounds/>
         </button>
-      </Draggable>
+      </Draggable> */}
+      <Widget className = {'sounds-widget'}
+        container = {<button className={`sounds-container ${sound ? 'focus' : ''}`}  onClick={() => setSound(!sound)}>
+          <header className='header'>
+            <h1>Sounds</h1>
+          </header>
+          <AllSounds/>
+        </button>}>
+      </Widget>
 
     </main>
   )

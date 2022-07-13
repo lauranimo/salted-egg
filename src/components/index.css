@@ -11,7 +11,10 @@ body {
   background-color: #FAF5EB;
   color: #750C00;
 }
-
+/* .main {
+  width: 100%;
+  margin: 0 auto;
+} */
 /* ----- Shared elements ----- */
 .header {
   display: flex;
@@ -46,22 +49,44 @@ body {
   width: 100%;
 }
 
+.no-display-close {
+  visibility: hidden;
+}
+
+.display-close {
+  background-color: #750C00;
+  color: #FAF5EB;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  float: right;
+  margin-left: 90%;
+  /* clear:both; */
+  /* margin-bottom: 50%; */
+}
+
 /* ----- todo widget ----- */
+.todo-widget {
+  width: 20%;
+  margin: auto;
+  margin-top: 20%;
+  /* top: 35%;
+  right: 0;
+  left: 0; */
+}
+
 .todo-container {
   display: flex;
   flex-wrap: wrap;
-  width: 18%;
+  width: 90%;
   overflow: auto;
   font-weight: 400;
   background-color: #FFD2B7;
   border: none;
-  padding: 1.5% 0.7% 1.5% 0.7%;
+  padding: 4% 3% 0.8% 3%;
   border-radius: 16px;
   box-shadow: 4px 4px 5px 0 rgba(117, 12, 0, 0.5);
-  margin: auto;
-  top: 35%;
-  right: 0;
-  left: 0;
   position: absolute;
   font-family: inherit;
   z-index: -1;
@@ -126,18 +151,28 @@ body {
 }
 
 /* ----- BG Sounds -----*/
-.sounds-container {
+.sounds-widget {
+  width: 19%;
   position: absolute;
-  width: 17%;
-  background: #FFD2B7;
-  overflow: auto;
-  border-radius: 16px;
-  padding: 1.5% 0.7% 1.5% 0.7%;
-  box-shadow: 4px 4px 5px 0 rgba(117, 12, 0, 0.5);
   margin: auto;
   top: 25%;
   right: 0;
   left: 0;
+}
+
+
+
+.sounds-container {
+  position: absolute;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  width: 88%;
+  background: #FFD2B7;
+  overflow: auto;
+  border-radius: 16px;
+  padding: 5% 3% 5% 3%;
+  box-shadow: 4px 4px 5px 0 rgba(117, 12, 0, 0.5);
   z-index: -1;
   font-family: inherit;
   border: none;
@@ -153,6 +188,7 @@ body {
   border-radius: 16px;
   padding: 8% 5% 0% 5%;
   color: #750C00;
+  width: 100%;
 }
 
 .play-sound {
