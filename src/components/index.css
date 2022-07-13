@@ -160,7 +160,6 @@ body {
 
 .sounds-container {
   position: absolute;
-  /* float: left; */
   display: flex;
   flex-wrap: wrap;
   width: 88%;
@@ -333,9 +332,4 @@ input[type=range]::-webkit-slider-thumb {
   justify-content: space-between;
   margin-left: 30%;
   height: 140%;
-}
-
-#timer-right {
-  color: #FFD2B7;
-  padding-right: 2em;
 }

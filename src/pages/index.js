@@ -38,16 +38,6 @@ function Index() {
     {...task, important: !task.important} : task))
   }
 
-  // Update Z-index
-  // const changeFocus = (ref) => {
-  //   // document.getElementsByClassName(className)[0].style.zIndex += 100;
-  //   // document.getElementsByClassName(className)[0].style.zIndex -= 100;
-  //   // console.log(document.getElementsByClassName({className})[0].style.zIndex);
-  //   this.ref.current.style.zIndex += 100;
-  //   // ref.current.style.zIndex += 100;
-  //   console.log(ref);
-
-  // }
 
   return (
     <main>
@@ -80,8 +70,6 @@ function Index() {
       <Widget id = {'timer-widget'}
         container = {<Timer></Timer>}>
         </Widget>
-      
-
     </main>
   )
 }
