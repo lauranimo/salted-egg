@@ -285,6 +285,12 @@ input[type=range]::-webkit-slider-thumb {
   font: inherit;
 }
 
+.timer-container {
+  border: none;
+  font-family: inherit;
+  display: flex;
+}
+
 .timer {
   position: absolute;
   /* float: left; */

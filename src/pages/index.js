@@ -68,7 +68,7 @@ function Index() {
         </button>}>
       </Widget>
       <Widget id = {'timer-widget'}
-        container = {<Timer/>}>
+        container = {<button className={'timer-container'}><Timer/></button>}>
         </Widget>
     </main>
   )
