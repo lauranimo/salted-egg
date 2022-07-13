@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import Draggable from "react-draggable";
 import Widget from "../components/Widget";
 import TaskHeader from "../components/todo/TaskHeader"
 import Tasks from '../components/todo/Tasks';
@@ -8,6 +7,7 @@ import AddTask from '../components/todo/AddTask';
 import Time from '../components/background/Time';
 import cafeAnimation from "../images/cafe-animation.mp4"
 import AllSounds from '../components/bg-sound/AllSounds';
+import Timer from "../components/timer/Timer";
 
 
 function Index() {
@@ -51,18 +51,7 @@ function Index() {
 
   return (
     <main>
-      {/* <Widget className = {'todo-widget'}>
-        <button className={`todo-container ${todo ? 'focus' : ''}`}  onClick={() => setTodo(!todo)} key='contain'>
-            <TaskHeader onAdd={() => setShowForm(!showForm)}
-            showForm={showForm}/>
-            {showForm && <AddTask onAdd={addTask}/>}
-            <Tasks tasks = {tasks}
-              onDelete = {deleteTask}
-              onToggle = {toggleimportant}/>
-            
-        </button>
-      </Widget> */}
-        <Widget className = {'todo-widget'}
+        <Widget id = {'todo-widget'}
           container = {<button className={`todo-container ${todo ? 'focus' : ''}`}  onClick={() => setTodo(!todo)} key='contain'>
             <TaskHeader onAdd={() => setShowForm(!showForm)}
             showForm={showForm}/>
@@ -80,15 +69,7 @@ function Index() {
       <div className="greetings-container">
           <Time/>
         </div>
-      {/* <Draggable>
-        <button className={`sounds-container ${sound ? 'focus' : ''}`}  onClick={() => setSound(!sound)}>
-          <header className='header'>
-            <h1>Sounds</h1>
-          </header>
-          <AllSounds/>
-        </button>
-      </Draggable> */}
-      <Widget className = {'sounds-widget'}
+      <Widget id = {'sounds-widget'}
         container = {<button className={`sounds-container ${sound ? 'focus' : ''}`}  onClick={() => setSound(!sound)}>
           <header className='header'>
             <h1>Sounds</h1>
@@ -96,6 +77,10 @@ function Index() {
           <AllSounds/>
         </button>}>
       </Widget>
+      <Widget id = {'timer-widget'}
+        container = {<Timer></Timer>}>
+        </Widget>
+      
 
     </main>
   )

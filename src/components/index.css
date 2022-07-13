@@ -11,10 +11,7 @@ body {
   background-color: #FAF5EB;
   color: #750C00;
 }
-/* .main {
-  width: 100%;
-  margin: 0 auto;
-} */
+
 /* ----- Shared elements ----- */
 .header {
   display: flex;
@@ -62,18 +59,16 @@ body {
   border-radius: 50%;
   float: right;
   margin-left: 90%;
-  /* clear:both; */
-  /* margin-bottom: 50%; */
 }
 
 /* ----- todo widget ----- */
-.todo-widget {
+#todo-widget {
   width: 20%;
-  margin: auto;
   margin-top: 20%;
-  /* top: 35%;
-  right: 0;
-  left: 0; */
+  margin-left: 40%;
+  border: none;
+  background: transparent;
+  font: inherit;
 }
 
 .todo-container {
@@ -151,20 +146,21 @@ body {
 }
 
 /* ----- BG Sounds -----*/
-.sounds-widget {
+#sounds-widget {
   width: 19%;
   position: absolute;
   margin: auto;
   top: 25%;
   right: 0;
   left: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
 }
-
-
 
 .sounds-container {
   position: absolute;
-  float: left;
+  /* float: left; */
   display: flex;
   flex-wrap: wrap;
   width: 88%;
@@ -239,51 +235,6 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -6px;
 }
 
-/* ***Most browsers support webkit now*** */
-/* input[type=range]::-moz-range-track {
-  width: 75%;
-  height: 0.5em;
-  cursor: pointer;
-  background: #750C00;
-  border-radius: 5px;
-}
-
-input[type=range]::-moz-range-thumb {
-  height: 1.2em;
-  width: 1.2em;
-  border-radius: 50%;
-  background: #750C00;
-  cursor: pointer;
-}
-
-input[type=range]::-ms-track {
-  width: 100%;
-  height: 9px;
-  cursor: pointer;
-
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-
-input[type=range]::-ms-fill-lower {
-  background: #750C00;
-  border-radius: 10px;
-
-}
-input[type=range]::-ms-fill-upper {
-  background: #750C00;
-  border-radius: 10px;
-}
-input[type=range]::-ms-thumb {
-  margin-top: -5px;
-  height: 1.2em;
-  width: 1.2em;
-  border-radius: 50%;
-  background: #750C00;
-  cursor: pointer;
-} */
-
 /* ----- Center BG Components ----- */
 #animation {
   position: absolute;
@@ -295,7 +246,6 @@ input[type=range]::-ms-thumb {
   left: 0;
 
 }
-
 
 .greetings-container {
   position: absolute;
@@ -321,4 +271,71 @@ input[type=range]::-ms-thumb {
 .greetings p {
   font-size: 50%;
   line-height: 20%;
+}
+
+/* ---------- Timer ---------- */
+#timer-widget {
+  width: 19%;
+  position: absolute;
+  margin: auto;
+  top: 25%;
+  right: 0;
+  left: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+}
+
+.timer {
+  position: absolute;
+  /* float: left; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  background: #FFD2B7;
+  /* overflow: auto; */
+  border-radius: 16px;
+  padding: 5% 3% 2% 3%;
+  box-shadow: 4px 4px 5px 0 rgba(117, 12, 0, 0.5);
+  z-index: -1;
+  font-family: inherit;
+  border: none;
+  font-size: 1em;
+}
+
+.timer-display {
+  display: flex;
+  width: 100%;
+  color: #750C00;
+  background: #FAF5EB;
+  border-radius: 16px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 5% 1% 5%;
+}
+
+.timer-time {
+  font-size: 65px;
+  letter-spacing: -5px;
+  padding: 0 1% 0 1%;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.2em;
+  padding-bottom: 0.6em;
+  width: 50%;
+
+}
+.button-control {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30%;
+  height: 140%;
+}
+
+#timer-right {
+  color: #FFD2B7;
+  padding-right: 2em;
 }

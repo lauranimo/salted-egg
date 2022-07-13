@@ -17,14 +17,12 @@ const Widget = ( props ) => {
   return (
     // Later when you have the delete function, switch with Button component!!!
     <Draggable>
-        <div className= {props.className}
+        <button id= {props.id}
         onMouseEnter={(e) => showClose(e)}
         onMouseLeave={(e) => hideClose(e)}>
-            {/* <button className= {close}>X</button> */}
             <div>{props.container}</div>
-            {/* <div>{props.head}</div> */}
             <button className= {close}>X</button>
-        </div>
+        </button>
     </Draggable>
   )
 }
