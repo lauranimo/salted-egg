@@ -9,8 +9,11 @@ import Time from '../components/background/Time';
 import cafeAnimation from "../images/cafe-animation.mp4"
 import AllSounds from '../components/bg-sound/AllSounds';
 import Timer from "../components/timer/Timer";
+import { FaBars } from 'react-icons/fa'
 
 const Layout = () => {
+    const [showMenu, setShowMenu] = useState(false);
+
     // For adding widgets to scrren from menu
     const [showTodo, setShowTodo] = useState(false);
     const [showSound, setShowSound] = useState(false);
@@ -24,6 +27,11 @@ const Layout = () => {
     const [showForm, setShowForm] = useState(false)
     const [tasks, setTasks] = useState([])
   
+    // Show Menu
+    const showWidgetMenu = () => {
+        setShowMenu(!showMenu);
+    }
+
     // Show Todo Widget
     const showTodoWidget = () => {
         setShowTodo(!showTodo);
@@ -60,10 +68,13 @@ const Layout = () => {
 
   return (
     <div>
-        <WidgetMenu
+        <FaBars title="Menu" id='menu-icon' onClick={showWidgetMenu}></FaBars>
+        {showMenu && <WidgetMenu
+        showMenu = {showWidgetMenu}
         showTodo = {showTodoWidget}
         showSound = {showSoundWidget}
-        showTimer = {showTimerWidget}></WidgetMenu>
+        showTimer = {showTimerWidget}>
+        </WidgetMenu>}
 
         {showTodo && <Widget id = {'todo-widget'}
             container = {
