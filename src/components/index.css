@@ -65,18 +65,64 @@ body {
   margin-left: 90%;
 }
 /* ----- widget menu ----- */
-.widget-menu {
-  display: flex;
-  /* width: 10%; */
-  flex-wrap: wrap;
-  width: 100px;
-  height: 100px;
+/* .menu-container {
+  display: block;
+  color: black;
+} */
+
+#menu-icon {
+  position: fixed;
+  top: 8%;
+  left: 3.5%;
+  /* margin-left: 3%; */
+  font-size: 30px;
+  color: inherit;
 }
 
-/* .todo-add-btn {
-  width: 50px;
-  height: 50px;
-} */
+.widget-menu {
+  display: block;
+  position: absolute;
+  /* width: 10%; */
+  /* flex-wrap: wrap; */
+  width: 30%;
+  height: 100%;
+  background-color: #F8F5F1;
+  /* margin-top: 50px; */
+  overflow: auto;
+  padding-top: 4.7%;
+  color: black;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 0% 10% 10% 0%;
+}
+
+
+.widget-menu h1 {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.widget-menu h2 {
+  margin-left: 10%;
+  margin-bottom: 2%;
+}
+
+.menu-buttons {
+  background-color: inherit;
+  padding-bottom: 10%;
+}
+
+#btn-category {
+  margin-bottom: 15%;
+}
+
+#add-btn {
+  background-color: inherit;
+  border-style: solid;
+  border-radius: 20%;
+  font-size: 500%;
+  margin-left: 10%;
+  padding: 2%;
+}
 
 /* ----- todo widget ----- */
 #todo-widget {
@@ -260,7 +306,9 @@ input[type=range]::-webkit-slider-thumb {
 #animation {
   position: absolute;
   z-index: -101;
-  width: 33%;
+  max-width: 30%;
+  min-width: 28%;
+  width: 30%;
   margin: auto;
   top: 12%;
   right: 0;
@@ -271,12 +319,12 @@ input[type=range]::-webkit-slider-thumb {
 .greetings-container {
   position: absolute;
   display: flex;
-  margin-top: 45%;
-  margin-left: 37%;
-  /* top: 80%;
+  /* margin-top: 40%;
+  margin-left: 37%; */
+  top: 70%;
   right: 0;
-  left: 0; */
-  font-size: 3.5vw;
+  left: 39%;
+  font-size: 3vw;
   z-index: -100;
 }
 
