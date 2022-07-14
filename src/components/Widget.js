@@ -21,7 +21,7 @@ const Widget = ( props ) => {
         onMouseEnter={(e) => showClose(e)}
         onMouseLeave={(e) => hideClose(e)}>
             <div>{props.container}</div>
-            <button className= {close}>X</button>
+            <button className= {close} onClick={props.showWidget}>X</button>
         </button>
     </Draggable>
   )
