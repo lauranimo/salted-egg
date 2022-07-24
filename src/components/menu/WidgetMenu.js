@@ -14,7 +14,7 @@ const WidgetMenu = ( props ) => {
             <div id='btn-category'>
                 <h2>Audio</h2>
                 <FaMusic title='Background Sounds' id='add-btn' onClick={props.showSound} ></FaMusic>
-                <FaSpotify title='Spotify' id='add-btn' onClick={props.showSound} ></FaSpotify>
+                <FaSpotify title='Spotify' id='add-btn' onClick={props.showSound} ></FaSpotify>       
             </div>
             <div id='btn-category'>
             <   h2>Time</h2>
